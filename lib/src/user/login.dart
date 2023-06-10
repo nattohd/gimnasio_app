@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Row(
                               children: const [
                                 Text(
-                                  'Inicio de sesión',
+                                  'Inicio de sesiónn',
                                   style: TextStyle(fontSize: 23),
                                 )
                               ],
