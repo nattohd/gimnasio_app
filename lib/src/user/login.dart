@@ -63,8 +63,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: size.width * 0.85,
                     height: size.height * 0.15,
                     // color: Colors.green,
-                    child: const Column(
-                      children: [
+                    child: Column(
+                      children: const [
                         Text(
                           'Gimnasio USM JMC',
                           style: TextStyle(fontSize: 35, color: Colors.white),
@@ -89,8 +89,9 @@ class _LoginScreenState extends State<LoginScreen> {
             Form(
                 key: _formKey,
                 child: Container(
-                    padding: EdgeInsets.all(15),
-                    margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                    padding: const EdgeInsets.all(15),
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 15, vertical: 10),
                     width: size.width,
                     height: size.height * 0.4,
                     decoration: BoxDecoration(
@@ -101,17 +102,18 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: Colors.black.withOpacity(0.2),
                           spreadRadius: 4,
                           blurRadius: 10,
-                          offset: Offset(0, 4), // changes position of shadow
+                          offset:
+                              const Offset(0, 4), // changes position of shadow
                         ),
                       ],
                     ),
                     child: Column(children: [
                       Container(
-                        margin: EdgeInsets.only(bottom: 20, top: 5),
+                        margin: const EdgeInsets.only(bottom: 20, top: 5),
                         child: Column(
                           children: [
                             Row(
-                              children: [
+                              children: const [
                                 Text(
                                   'Inicio de sesión',
                                   style: TextStyle(fontSize: 23),
@@ -180,7 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
-                        child: Container(
+                        child: SizedBox(
                           width: double.infinity,
                           // height: size.height * 0.05,
                           child: Center(
@@ -208,8 +210,6 @@ class _LoginScreenState extends State<LoginScreen> {
           height: size.height * 0.1,
           width: size.width,
           child: ElevatedButton(
-            child: new Text("Ingresar".toUpperCase(),
-                style: TextStyle(fontSize: 15)),
             style: ButtonStyle(
                 foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
@@ -222,6 +222,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 setState(() {});
               }
             },
+            child: Text("Ingresar".toUpperCase(),
+                style: const TextStyle(fontSize: 15)),
           ),
         )
       ]),
