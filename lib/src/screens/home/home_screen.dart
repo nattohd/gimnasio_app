@@ -1,16 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gimnasio_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: Text("home"),
+        leading: Icon(
+          Icons.home_filled,
+          color: colors.primary,
+        ),
+        title: const Text('Inicio'),
       ),
-      body: Container(
-        child: Text('Hola'),
+      body: ListView.builder(
+        itemCount: menuItems.length,
+        itemBuilder: (context, index) {
+          final item = menuItems[index];
+
+          return ListTile(
+            splashColor: colors.primary.withOpacity(0.35),
+            title: Text(item.title),
+            subtitle: Text(item.subTitle),
+            trailing: Icon(
+              Icons.arrow_forward_ios_outlined,
+              color: colors.primary,
+            ),
+            leading: Icon(
+              item.icon,
+              color: colors.primary,
+            ),
+            // ignore: avoid_print
+            onTap: () => context.push(item.link),
+          );
+        },
       ),
     );
   }
