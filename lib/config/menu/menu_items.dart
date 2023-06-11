@@ -27,4 +27,10 @@ const List<MenuItem> menuItems = [
     link: '/reserve',
     icon: Icons.calendar_month_outlined,
   ),
+  MenuItem(
+    title: 'Escanear Qr',
+    subTitle: 'Escanea un Qr para verificar hora de reservación',
+    link: '/scan',
+    icon: Icons.qr_code_scanner_rounded,
+  ),
 ];

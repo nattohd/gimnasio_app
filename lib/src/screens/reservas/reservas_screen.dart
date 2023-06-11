@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gimnasio_app/src/screens/reservas/widgets/body_calendar.dart';
-import 'package:gimnasio_app/src/screens/reservas/widgets/grilla_calendar.dart';
 import 'package:gimnasio_app/src/screens/reservas/widgets/header_calendar.dart';
 import 'package:go_router/go_router.dart';
 

@@ -1,3 +1,5 @@
+import 'package:gimnasio_app/src/screens/qr/qrgenerate_screen.dart';
+import 'package:gimnasio_app/src/screens/qr/scanqr_screen.dart';
 import 'package:gimnasio_app/src/screens/screens.dart';
 import 'package:go_router/go_router.dart';
 
@@ -20,6 +22,14 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/reserve',
       builder: (context, state) => const ReservasScreen(),
+    ),
+    GoRoute(
+      path: '/qrgenerate',
+      builder: (context, state) => const QrGenerateScreen(),
+    ),
+    GoRoute(
+      path: '/scan',
+      builder: (context, state) => const ScanQRScreen(),
     ),
   ],
 );
