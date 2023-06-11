@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gimnasio_app/src/screens/screens.dart';
+import 'config/router/app_router.dart';
 import 'config/themes/main_theme.dart';
 
 void main() {
@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Gimansio USM JMC',
+      routerConfig: appRouter,
       theme: MainTheme(selectedColor: 5).getTheme(),
-      home: const LoginScreen(),
     );
   }
 }
