@@ -8,12 +8,51 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final textStyles = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
         leading: Icon(
           Icons.home_filled,
           color: colors.primary,
         ),
+        actions: [
+          PopupMenuButton<String>(
+            onSelected: (value) {
+              if (value == 'logout') {
+                // Acción al seleccionar "Cerrar sesión"
+                // Puedes llamar a un método para cerrar la sesión o realizar otras acciones necesarias
+              }
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              PopupMenuItem<String>(
+                value: 'logout',
+                child: ListTile(
+                  title: Text('Cerrar sesión'),
+                ),
+              ),
+            ],
+            child: InkWell(
+              splashColor: colors.primary.withOpacity(.1),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              onTap: () {},
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.person,
+                      color: colors.primary,
+                    ),
+                    const SizedBox(width: 5),
+                    Text('Usuario usm', style: textStyles.labelMedium)
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 10),
+        ],
         title: const Text('Inicio'),
       ),
       body: ListView.builder(
