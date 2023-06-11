@@ -11,31 +11,31 @@ List<Map<String, dynamic>> hours = [
 
 List<Map<String, dynamic>> days = [
   {
-    'abreviation': 'L',
+    'abreviation': 'Lu',
     'numDay': 5,
     'currentDay': false,
     'outRange': true,
   },
   {
-    'abreviation': 'M',
+    'abreviation': 'Ma',
     'numDay': 6,
     'currentDay': false,
     'outRange': true,
   },
   {
-    'abreviation': 'M',
+    'abreviation': 'Mi',
     'numDay': 7,
     'currentDay': false,
     'outRange': true,
   },
   {
-    'abreviation': 'J',
+    'abreviation': 'Ju',
     'numDay': 8,
     'currentDay': true,
     'outRange': false,
   },
   {
-    'abreviation': 'V',
+    'abreviation': 'Vi',
     'numDay': 9,
     'currentDay': false,
     'outRange': false,
