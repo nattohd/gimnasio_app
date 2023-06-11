@@ -41,7 +41,7 @@ class HeaderLogin extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Gimnasio USM JMC',
+                      'Gimnasio USM2 JMC',
                       style: textStyle.headlineLarge,
                     ),
                     Text(
