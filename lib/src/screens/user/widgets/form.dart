@@ -20,6 +20,7 @@ class _FormWidgetState extends State<FormWidget> {
     Size size = MediaQuery.of(context).size;
     final colors = Theme.of(context).colorScheme;
     final textStyle = Theme.of(context).textTheme;
+    final isDarkMode = Brightness.dark == Theme.of(context).brightness;
 
     return Form(
       key: widget.formKey,
@@ -29,13 +30,16 @@ class _FormWidgetState extends State<FormWidget> {
         width: size.width,
         height: size.height * 0.45,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color:
+              isDarkMode ? const Color.fromARGB(255, 21, 21, 21) : Colors.white,
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 4,
-              blurRadius: 10,
+              color: isDarkMode
+                  ? const Color.fromARGB(255, 184, 183, 183).withOpacity(0.2)
+                  : const Color.fromARGB(255, 39, 38, 38).withOpacity(0.2),
+              spreadRadius: 2,
+              blurRadius: 20,
               offset: const Offset(0, 4), // changes position of shadow
             ),
           ],

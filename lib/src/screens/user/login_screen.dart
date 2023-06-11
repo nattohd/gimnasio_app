@@ -8,10 +8,8 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
-    return Material(
-      type: MaterialType.transparency,
-      color: Colors.white,
-      child: Column(children: [
+    return Scaffold(
+      body: Column(children: [
         const HeaderLogin(),
         FormWidget(
           formKey: formKey,

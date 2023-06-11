@@ -7,54 +7,52 @@ class HeaderLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    final allColors = Theme.of(context);
     final textStyle = Theme.of(context).textTheme;
-    return Container(
-      color: Colors.white,
-      child: Stack(
-        children: [
-          ClipPath(
-            clipper: WaveClipperTwo(),
-            child: Container(
-              height: size.height * 0.295,
-              width: size.width,
-              color: allColors.primaryColorDark.withOpacity(.5),
-            ),
+    final colors = Theme.of(context).colorScheme;
+
+    return Stack(
+      children: [
+        ClipPath(
+          clipper: WaveClipperTwo(),
+          child: Container(
+            height: size.height * 0.295,
+            width: size.width,
+            color: colors.primary.withOpacity(.5),
           ),
-          ClipPath(
-            clipper: WaveClipperTwo(),
-            child: Container(
-              height: size.height * 0.28,
-              width: size.width,
-              color: allColors.primaryColorDark,
-            ),
+        ),
+        ClipPath(
+          clipper: WaveClipperTwo(),
+          child: Container(
+            height: size.height * 0.28,
+            width: size.width,
+            color: colors.primary,
           ),
-          //*********Header *********/
-          Positioned.fill(
-            child: Align(
+        ),
+        //*********Header *********/
+        Positioned.fill(
+          child: Align(
+            alignment: Alignment.center,
+            child: Container(
               alignment: Alignment.center,
-              child: Container(
-                alignment: Alignment.center,
-                width: size.width * 0.85,
-                height: size.height * 0.15,
-                // color: Colors.green,
-                child: Column(
-                  children: [
-                    Text(
-                      'Gimnasio USM JMC',
-                      style: textStyle.headlineLarge,
-                    ),
-                    Text(
-                      'Ingreso de sesión.',
-                      style: textStyle.bodyLarge,
-                    ),
-                  ],
-                ),
+              width: size.width * 0.85,
+              height: size.height * 0.15,
+              // color: Colors.green,
+              child: Column(
+                children: [
+                  Text(
+                    'Gimnasio USM JMC',
+                    style: textStyle.headlineLarge,
+                  ),
+                  Text(
+                    'Ingreso de sesión.',
+                    style: textStyle.bodyLarge,
+                  ),
+                ],
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

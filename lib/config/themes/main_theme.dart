@@ -18,16 +18,17 @@ class MainTheme {
         assert(selectedColor < colorList.length,
             'El color debe ser menor que ${colorList.length}');
 
-  ThemeData getTheme() => ThemeData(
-        // brightness: Brightness.dark,
+  ThemeData getTheme(bool darkMode) => ThemeData(
+        brightness: darkMode ? Brightness.dark : Brightness.light,
         useMaterial3: true,
         colorSchemeSeed: colorList[selectedColor],
         appBarTheme: const AppBarTheme(
           centerTitle: false,
         ),
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white),
-          headlineLarge: TextStyle(color: Colors.white),
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(color: darkMode ? Colors.black : Colors.white),
+          headlineLarge:
+              TextStyle(color: darkMode ? Colors.black : Colors.white),
         ),
       );
 }

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Gimansio USM JMC',
       routerConfig: appRouter,
-      theme: MainTheme(selectedColor: 5).getTheme(),
+      theme: MainTheme(selectedColor: 5).getTheme(false),
     );
   }
 }
