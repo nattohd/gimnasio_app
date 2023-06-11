@@ -3,13 +3,11 @@ import 'package:go_router/go_router.dart';
 
 // GoRouter configuration
 final appRouter = GoRouter(
-  initialLocation: '/login',
   routes: [
-    // GoRoute(
-    //   path: '/',
-    //   builder: (context, state) => const HomeScreen(),
-    // ),
-
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const HomeScreen(),
+    ),
     GoRoute(
       path: '/login',
       builder: (context, state) => const LoginScreen(),
